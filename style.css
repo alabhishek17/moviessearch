@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#move-container{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(232, 238, 238);
+}
+.card{
+    margin: 30px;
+    width: 30%;
+    /* height: 100%; */
+    /* margin: 10px;
+    padding: 10px; */
+}
+
+#search{
+    margin-left: 45%;
+    padding: 10px;
+    margin-top: 40px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+    border: 2px solid;
+
+}
