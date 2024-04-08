@@ -1,0 +1,40 @@
+<!-- create a simple web page that fetches and displays a list of products.(title,price)
+
+API: https://fakestoreapi.com/products -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store API Project</title>
+</head>
+<body>
+    <h1>Products from Fake Store API</h1>
+    <button id="btn">search</button>
+    <div id="product-list"></div>
+    <script>
+
+
+        let searcBtn=document.getElementById("btn");
+        let newOne=document.getElementById("product-list");
+        searcBtn.addEventListener("click",webPage);
+        async function webPage(){
+            let response=await fetch("https://fakestoreapi.com/products");
+            let data=await response.json();
+
+            console.log(data);
+            data.forEach(element => {
+                let newdiv=document.createElement("div")
+                newdiv.innerHTML=`
+                <p>${element.title}</p>
+                <p>${element.price}</p>
+                `
+                newOne.append(newdiv);
+                // console.log(newOne);
+
+            });
+        }
+    </script>
+</body>
+</html>
